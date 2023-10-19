@@ -8,11 +8,14 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <div className="bg-[#F6F6F6] pt-10">
-        <div className="max-w-screen-xl mx-auto grid grid-cols-3 border gap-5 p-10 bg-[#FBF3E2]">
-          {loadedBrands.map((brand) => (
-            <Brands key={brand._id} brand={brand}></Brands>
-          ))}
+      <div className="bg-[#F6F6F6]">
+        <div className="max-w-screen-xl mx-auto ">
+          <h2 className="text-center text-4xl font-bold pt-10 text-[#2d373c]">Our Brands</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-10 ">
+            {loadedBrands.map((brand) => (
+              <Brands key={brand._id} brand={brand}></Brands>
+            ))}
+          </div>
         </div>
       </div>
     </div>
