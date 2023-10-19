@@ -5,7 +5,6 @@ const Root = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <h2 className="text-xs font-Merriweather">This is Root</h2>
       <Outlet></Outlet>
     </div>
   );
