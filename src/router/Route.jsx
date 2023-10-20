@@ -7,10 +7,12 @@ import Products from "../pages/Products/Products";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import UpdateProducts from "../pages/UpdateProducts/UpdateProducts";
 import AddProduct from "../pages/AddProduct/AddProduct";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 const createdRoute = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

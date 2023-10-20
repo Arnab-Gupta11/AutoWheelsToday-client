@@ -6,11 +6,11 @@ const ProductDetails = () => {
   console.log(product);
   return (
     <div className="bg-[#f7f1e6] min-h-screen ">
-      <div className="grid grid-cols-5 gap-5 pt-10 items-center">
-        <div className="col-span-3">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 pt-10 items-center">
+        <div className="lg:col-span-3">
           <img className="w-full h-[600px]" src={image} alt="" />
         </div>
-        <div className="col-span-2 px-5 ">
+        <div className="lg:col-span-2 px-5 ">
           <h2 className="text-[#2d373c] font-semibold text-4xl">{name}</h2>
           <h4 className="text-[#2d373c] font-medium text-2xl mt-1">{type}</h4>
           <p className="text-gray-600 font-medium text-base text-justify mt-3">{short_description}</p>
