@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Products from "../pages/Products/Products";
+import ProductDetails from "../pages/ProductDetails/ProductDetails";
+import UpdateProducts from "../pages/UpdateProducts/UpdateProducts";
 const createdRoute = createBrowserRouter([
   {
     path: "/",
@@ -25,10 +27,20 @@ const createdRoute = createBrowserRouter([
       {
         path: "/brands/:name",
         element: <Products></Products>,
+        loader: ({ params }) => fetch(`https://brand-new-website-server.vercel.app/brands/${params.name}`),
+      },
+      {
+        path: "/brands/:name/:id",
+        element: <ProductDetails></ProductDetails>,
         loader: ({ params }) => {
           console.log();
-          return fetch(`https://brand-new-website-server.vercel.app/${params.name}`);
+          return fetch(`https://brand-new-website-server.vercel.app/brands/${params.name}/${params.id}`);
         },
+      },
+      {
+        path: "/brands/update/:name/:id",
+        element: <UpdateProducts></UpdateProducts>,
+        loader: ({ params }) => fetch(`https://brand-new-website-server.vercel.app/brands/${params.name}/${params.id}`),
       },
     ],
   },

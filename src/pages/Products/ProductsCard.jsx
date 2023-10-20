@@ -19,14 +19,14 @@ const ProductsCard = ({ product }) => {
           <p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-700">{rating}</p>
           <div className="my-5 flex gap-5">
             <div className="w-1/2">
-              <Link>
+              <Link to={`/brands/${brand_name}/${_id}`}>
                 <button className="w-full hover:border-2 text-white hover:border-[#FF6A25] hover:bg-white hover:text-[#FF6A25] font-medium bg-[#FF6A25] py-3 text-[xl] hover:transition hover:duration-500">
                   Details
                 </button>
               </Link>
             </div>
             <div className="w-1/2">
-              <Link>
+              <Link to={`/brands/update/${brand_name}/${_id}`}>
                 <button className="w-full hover:border-2 text-white hover:border-[#FF6A25] hover:bg-white hover:text-[#FF6A25] font-medium bg-[#FF6A25] py-3 text-[xl] hover:transition hover:duration-500">
                   Update
                 </button>

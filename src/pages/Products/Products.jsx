@@ -7,7 +7,7 @@ const Products = () => {
   return (
     <div>
       {loadedData.length === 0 ? (
-        <div className="w-3/5 mx-auto text-center mt-20 lg:mt-56">
+        <div className="w-3/5 mx-auto text-[#2d373c]  text-center mt-20 lg:mt-56">
           <h2>
             <q className="text-xl lg:text-3xl font-bold">
               Currently, there are no products available for this brand. Please explore our other brands and models to find the perfect vehicle for
