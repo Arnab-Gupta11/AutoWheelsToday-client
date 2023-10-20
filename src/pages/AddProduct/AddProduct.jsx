@@ -92,11 +92,12 @@ const AddProduct = () => {
               <div className="w-1/2">
                 <label htmlFor="">Price</label>
                 <input
-                  required
+                  // required
                   type="text"
                   name="price"
                   placeholder="Enter price"
-                  id=""
+                  id="price"
+                  defaultValue="$"
                   className="border border-[#2d373c] focus-within:outline-[#FF6A25] block w-full py-3 px-3 mt-2"
                 />
               </div>

@@ -6,6 +6,7 @@ import { AuthContext } from "../../providers/AuthProviders";
 
 const Navbar = () => {
   const { logoutUser, user } = useContext(AuthContext);
+  // const email = user.email;
   const link = (
     <>
       <div className="flex flex-col gap-4 lg:flex-row lg:gap-7 font-medium font-barlow">
@@ -33,7 +34,7 @@ const Navbar = () => {
         {user ? (
           <div>
             <NavLink
-              to="/myCart"
+              to={`/carts`}
               className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#FF6A25] shadow-md  py-2 rounded-md px-2" : "")}
             >
               My Cart

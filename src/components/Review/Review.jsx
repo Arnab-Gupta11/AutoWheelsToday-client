@@ -26,7 +26,7 @@ const Review = () => {
           <div className="flex gap-5">
             <Marquee pauseOnHover="ture">
               {reviews?.map((review) => (
-                <ReviewCard key={review.id} reviewCard={review}></ReviewCard>
+                <ReviewCard key={review._id} reviewCard={review}></ReviewCard>
               ))}
             </Marquee>
           </div>

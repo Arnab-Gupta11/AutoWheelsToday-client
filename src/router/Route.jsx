@@ -8,6 +8,7 @@ import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import UpdateProducts from "../pages/UpdateProducts/UpdateProducts";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import MyCart from "../pages/MyCart/MyCart";
 const createdRoute = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +31,14 @@ const createdRoute = createBrowserRouter([
       {
         path: "/addProduct",
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/carts/",
+        element: <MyCart></MyCart>,
+        // loader: ({ params }) => {
+        //   return console.log(params.email);
+        //   // return fetch(`https://brand-new-website-server.vercel.app/carts/${params.email}`);
+        // },
       },
       {
         path: "/brands/:name",
