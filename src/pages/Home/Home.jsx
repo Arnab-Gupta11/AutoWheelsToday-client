@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import Brands from "./Brands";
 import Review from "../../components/Review/Review";
 import About from "../../components/About/About";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const loadedBrands = useLoaderData();
@@ -22,6 +23,7 @@ const Home = () => {
       </div>
       <About></About>
       <Review></Review>
+      <Footer></Footer>
     </div>
   );
 };
