@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const ProductDetails = () => {
   const product = useLoaderData();
@@ -15,9 +15,11 @@ const ProductDetails = () => {
           <h4 className="text-[#2d373c] font-medium text-2xl mt-1">{type}</h4>
           <p className="text-gray-600 font-medium text-base text-justify mt-3">{short_description}</p>
           <h2 className="text-3xl font-bold text-[#FF6A25] mt-3">{price}</h2>
-          <button className="w-full hover:border-2 text-white hover:border-[#FF6A25] hover:bg-white hover:text-[#FF6A25] font-medium bg-[#FF6A25] py-3 text-[xl] hover:transition hover:duration-500 mt-8">
-            Add to Cart
-          </button>
+          <Link>
+            <button className="w-full hover:border-2 text-white hover:border-[#FF6A25] hover:bg-white hover:text-[#FF6A25] font-medium bg-[#FF6A25] py-3 text-[xl] hover:transition hover:duration-500 mt-8">
+              Add to Cart
+            </button>
+          </Link>
         </div>
       </div>
     </div>

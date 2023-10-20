@@ -6,6 +6,7 @@ import Register from "../pages/Register/Register";
 import Products from "../pages/Products/Products";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import UpdateProducts from "../pages/UpdateProducts/UpdateProducts";
+import AddProduct from "../pages/AddProduct/AddProduct";
 const createdRoute = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +24,10 @@ const createdRoute = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/addProduct",
+        element: <AddProduct></AddProduct>,
       },
       {
         path: "/brands/:name",
