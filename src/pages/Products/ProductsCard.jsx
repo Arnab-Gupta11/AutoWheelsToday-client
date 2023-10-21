@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const ProductsCard = ({ product }) => {
   const { _id, price, image, brand_name, type, rating, name } = product;
+
   return (
     <div>
       <div className="relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 ">

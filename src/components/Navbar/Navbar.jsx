@@ -18,31 +18,24 @@ const Navbar = () => {
             HOME
           </NavLink>
         </div>
-        {user ? (
-          <div>
-            <NavLink
-              to="/addProduct"
-              className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#FF6A25] shadow-md  py-2 rounded-md px-2" : "")}
-            >
-              Add Product
-            </NavLink>
-          </div>
-        ) : (
-          ""
-        )}
 
-        {user ? (
-          <div>
-            <NavLink
-              to={`/carts`}
-              className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#FF6A25] shadow-md  py-2 rounded-md px-2" : "")}
-            >
-              My Cart
-            </NavLink>
-          </div>
-        ) : (
-          ""
-        )}
+        <div>
+          <NavLink
+            to="/addProduct"
+            className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#FF6A25] shadow-md  py-2 rounded-md px-2" : "")}
+          >
+            Add Product
+          </NavLink>
+        </div>
+
+        <div>
+          <NavLink
+            to={`/carts`}
+            className={({ isActive, isPending }) => (isPending ? "pending" : isActive ? "text-[#FF6A25] shadow-md  py-2 rounded-md px-2" : "")}
+          >
+            My Cart
+          </NavLink>
+        </div>
 
         {/* <div>
           <NavLink

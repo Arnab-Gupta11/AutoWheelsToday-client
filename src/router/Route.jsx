@@ -9,6 +9,7 @@ import UpdateProducts from "../pages/UpdateProducts/UpdateProducts";
 import AddProduct from "../pages/AddProduct/AddProduct";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import MyCart from "../pages/MyCart/MyCart";
+import PrivateRoute from "./PrivateRoute";
 const createdRoute = createBrowserRouter([
   {
     path: "/",
@@ -30,11 +31,19 @@ const createdRoute = createBrowserRouter([
       },
       {
         path: "/addProduct",
-        element: <AddProduct></AddProduct>,
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/carts/",
-        element: <MyCart></MyCart>,
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
         // loader: ({ params }) => {
         //   return console.log(params.email);
         //   // return fetch(`https://brand-new-website-server.vercel.app/carts/${params.email}`);
@@ -47,7 +56,11 @@ const createdRoute = createBrowserRouter([
       },
       {
         path: "/brands/:name/:id",
-        element: <ProductDetails></ProductDetails>,
+        element: (
+          <PrivateRoute>
+            <ProductDetails></ProductDetails>
+          </PrivateRoute>
+        ),
         loader: ({ params }) => {
           console.log();
           return fetch(`https://brand-new-website-server.vercel.app/brands/${params.name}/${params.id}`);
@@ -55,7 +68,11 @@ const createdRoute = createBrowserRouter([
       },
       {
         path: "/brands/update/:name/:id",
-        element: <UpdateProducts></UpdateProducts>,
+        element: (
+          <PrivateRoute>
+            <UpdateProducts></UpdateProducts>
+          </PrivateRoute>
+        ),
         loader: ({ params }) => fetch(`https://brand-new-website-server.vercel.app/brands/${params.name}/${params.id}`),
       },
     ],
