@@ -7,5 +7,6 @@
 - update product
 - user cannot use private route without login
 - responsive for phone and tablet
-
-Live link : https://brand-shop-a541e.web.app/
+# Technology used in this project
+  [![My Skills](https://skillicons.dev/icons?i=html,css,js,react,tailwind,express,mongodb,firebase&perline=6)](https://skillicons.dev)
+# Live link : https://brand-shop-a541e.web.app/
